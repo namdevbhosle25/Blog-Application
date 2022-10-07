@@ -1,0 +1,13 @@
+<div class="container mt-5">
+  <div>
+    <h2 class="display-3">{{ post.title }}</h2>
+    <h4 class="lead">{{ post.subtitle }}</h4>
+    <p>{{ post.content }}</p>
+    <div class="float-start ">
+      Tags: <a class="m-1 text-decoration-none text-black" *ngFor="let tag of post.tags">{{ tag }}</a>
+    </div>
+    <div class="float-end">
+      <span class="lead">Posted By: {{post.userid.name}}</span>
+    </div>
+  </div>
+</div>

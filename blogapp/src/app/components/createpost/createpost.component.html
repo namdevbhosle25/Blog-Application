@@ -1,0 +1,52 @@
+<div class="text-center loginDiv">
+  <main class="form-signin w-100 m-auto">
+    <form [formGroup]="postForm" (ngSubmit)="createPost()">
+      <img
+        class="mb-4"
+        src="https://picsum.photos/200/300"
+        alt=""
+        width="72"
+        height="57"
+      />
+      <h1 class="h3 mb-3 fw-normal">Create Post</h1>
+      <div class="form-floating">
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          formControlName="title"
+        />
+        <label for="title">Title</label>
+      </div>
+      <div class="form-floating mt-2">
+        <input
+          type="text"
+          class="form-control"
+          id="subtitle"
+          formControlName="subtitle"
+        />
+        <label for="subtitle ">Subtitle</label>
+      </div>
+      <div class="form-floating mt-2">
+      <textarea
+        class="form-control"
+        id="content"
+        formControlName="content"
+      ></textarea>
+      <label for="content">Content</label>
+      </div>
+      <div class="form-floating mt-2">
+      <input
+        class="form-control"
+        id="tags"
+        formControlName="tags"
+      >
+      <label for="tags">Tags</label>
+      </div>
+
+      <button class="w-100 btn btn-lg btn-primary mt-2" type="submit">
+        Create Post
+      </button>
+    </form>
+  </main>
+</div>
